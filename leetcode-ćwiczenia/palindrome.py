@@ -15,5 +15,3 @@ def isPalindrome(x):
     print(x)
     print(rev)
     return x == rev or x == rev / 10
-
-isPalindrome(121)
