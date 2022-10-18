@@ -8,4 +8,3 @@ def plusOne(digits):
     for i in range(len(number)):
         digit.append(int(number[i]))
     return digit
-
