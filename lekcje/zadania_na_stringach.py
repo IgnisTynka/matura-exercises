@@ -5,30 +5,26 @@ print(len(text))
 
 # 3.33
 print("\n3.33 \na)")
-for i in range(len(text)):
-    print(text[i], end=" ")
+for i in text:
+    print(i, end=" ")
 
 print("\nb)")
 for i in range(len(text)):
     print(text[(len(text) - 1) - i], end=" ")
 
 print("\nc)")
-for i in range(0, len(text), 2):
+for i in range(0, len(text), 2):    # for x in text[::2]:
     if i+1 < len(text):
-        print(text[i], end="")
-        print(text[i + 1], end=" ")
+        print(text[i] + text[i + 1], end=" ")
     else:
         print(text[i], end=" ")
 
 print("\nd)")
 for i in range(len(text) - 1, 0, -3):
     if i - 2 >= 0:
-        print(text[i], end="")
-        print(text[i - 1], end="")
-        print(text[i - 2], end="  ")
+        print(text[i] + text[i - 1] + text[i - 2], end=" ")
     elif i - 1 >= 0:
-        print(text[i], end="")
-        print(text[i-1])
+        print(text[i] + text[i-1], end=" ")
     else:
         print(text[i])
 
@@ -69,7 +65,3 @@ for i in range(len(long_text)):
             tem_text = ''
     else:
         tem_text += long_text[i]
-
-
-
-
