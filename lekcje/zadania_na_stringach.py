@@ -4,7 +4,7 @@ text = input("Wpisz tekst: ")
 print(len(text))
 
 # 3.33
-print("3.33 \na)")
+print("\n3.33 \na)")
 for i in range(len(text)):
     print(text[i], end=" ")
 
@@ -32,7 +32,7 @@ for i in range(len(text) - 1, 0, -3):
     else:
         print(text[i])
 
-print("3.36")
+print("\n3.36")
 some_text = input("Wpisz tekst: ")
 print("\na)")
 for i in range(len(some_text)):
@@ -47,6 +47,7 @@ some_text += ' '
 tem_text = ''
 for i in range(len(some_text)):
     if some_text[i] == ' ':
+        tem_text = str.lower(tem_text)    # jezeli chcemy ignorowac wielkosc liter
         if tem_text[0] == tem_text[len(tem_text)-1]:
             print(tem_text)
             tem_text = ''
@@ -54,6 +55,20 @@ for i in range(len(some_text)):
             tem_text = ''
     else:
         tem_text += some_text[i]
+
+print("\n3.36")
+long_text = input("Wpisz tekst: ")
+long_text += ' '
+tem_text = ''
+for i in range(len(long_text)):
+    if long_text[i] == ' ':  # jezeli chcemy ignorowac wielkosc liter
+        if tem_text[0] == 'p' and (len(tem_text) % 2 == 1):
+            print(tem_text)
+            tem_text = ''
+        else:
+            tem_text = ''
+    else:
+        tem_text += long_text[i]
 
 
 
