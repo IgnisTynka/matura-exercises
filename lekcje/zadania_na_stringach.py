@@ -43,6 +43,7 @@ for i in range(len(some_text)):
 
 # 3.36
 print("\nb)")
+some_text += ' '
 tem_text = ''
 for i in range(len(some_text)):
     if some_text[i] == ' ':
@@ -51,10 +52,6 @@ for i in range(len(some_text)):
             tem_text = ''
         else:
             tem_text = ''
-    elif i == len(some_text)-1:
-        tem_text += some_text[i]
-        if tem_text[0] == tem_text[len(tem_text)-1]:
-            print(tem_text)
     else:
         tem_text += some_text[i]
 
