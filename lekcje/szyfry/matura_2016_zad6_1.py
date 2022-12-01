@@ -7,8 +7,8 @@ lines = f.readlines()
 def encrypted(lines):
     result = ""
     for line in lines:
-        for i in range(len(line)-1):
-            result += chr((ord(line[i]) + 107 - 65) % 26 + 65)
+        for letter in line:
+            result += chr((ord(letter) + 107 - 65) % 26 + 65)
         o.write(f'{result}\n')
         result = ""
 
