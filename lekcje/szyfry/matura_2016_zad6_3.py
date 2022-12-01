@@ -11,7 +11,7 @@ def find_cryptogram(lines):
         print(chr((ord(word[0][0]) + vector - 65) % 26 + 65))
         for i in range(len(word[0])):
             if chr((ord(word[0][i]) + vector - 65) % 26 + 65) != word[1][i]:
-                o.write(f'{line}\n')
+                o.write(f'{word[0]}\n')
                 break
         vector = 0
 
