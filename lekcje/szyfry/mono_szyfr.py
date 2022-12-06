@@ -1,8 +1,3 @@
-klucz = input("Wpisz tekst do stworzenia alfabetu (wielkie litery): ")
-text = input("Wpisz tekst do zaszyfrowania (wielkie litery): ")
-klucz = klucz.upper()
-text = text.upper()
-
 def createAlphabet(klucz):
     alfabet = []
     for l in klucz:
@@ -12,12 +7,29 @@ def createAlphabet(klucz):
         if chr(c) not in alfabet:
             alfabet.append(chr(c))
     return alfabet
-
 def encryption(text, klucz):
     alfabetSzyfrowy = createAlphabet(klucz)
     result = ""
     for l in text:
         result += alfabetSzyfrowy[ord(l)-65]
     return result
+def decryption(text, klucz):
+    alfabetSzyfrowy = createAlphabet(klucz)
+    result = ""
+    for l in text:
+        result += chr(alfabetSzyfrowy.index(l)+65)
+    return result
 
-print(encryption(text, klucz))
+klucz = input("Wpisz tekst do stworzenia alfabetu: ")
+text = input("Wpisz tekst do zaszyfrowania: ")
+klucz = klucz.upper()
+text = text.upper()
+
+entext = encryption(text, klucz)
+print(entext)
+
+entext = input("Wpisz tekst do zaszyfrowania: ")
+entext = entext.upper()
+
+detext = decryption(entext, klucz)
+print(detext)
