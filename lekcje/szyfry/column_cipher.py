@@ -23,6 +23,7 @@ def encrytion_v1(text):
         for j in range(n):
             szyfr += pom[j][i]
     return szyfr
+
 #z usuwaniem spacji
 def space_remove(text):
     result = ""
@@ -44,12 +45,12 @@ def encrytion_v2(text):
     szyfr = ""
     for i in range(n):
         for j in range(n):
-            szyfr += pom[j][i]
+            if pom[j][i] != "_":
+                szyfr += pom[j][i]
     return szyfr
 
-
-text = 'ALGORYTM PRZESTAWIENIOWY Z TABLICA O WYMIARACH  NxN'
-
+#ALGORYTM PRZESTAWIENIOWY Z TABLICA O WYMIARACH  NxN
+text = 'ALGORYTMY PRZESTAWIENIOWE'
 
 print(encrytion_v1(text))
 print(encrytion_v2(space_remove(text)))
