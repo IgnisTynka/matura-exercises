@@ -5,7 +5,7 @@ def tab_size(text):
         n += 1
     return n
 
-#bez usuwania spacji
+# with space
 def encrytion_v1(text):
     n = tab_size(text)
     pom = tab = [[0 for col in range(n)] for row in range(n)]
@@ -24,7 +24,7 @@ def encrytion_v1(text):
             szyfr += pom[j][i]
     return szyfr
 
-#z usuwaniem spacji
+# without space
 def space_remove(text):
     result = ""
     for l in text:
@@ -49,8 +49,7 @@ def encrytion_v2(text):
                 szyfr += pom[j][i]
     return szyfr
 
-#ALGORYTM PRZESTAWIENIOWY Z TABLICA O WYMIARACH  NxN
-text = 'ALGORYTMY PRZESTAWIENIOWE'
+text = input("Enter text: ")
 
 print(encrytion_v1(text))
 print(encrytion_v2(space_remove(text)))

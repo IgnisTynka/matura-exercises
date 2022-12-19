@@ -27,8 +27,7 @@ def encrytion(text, key):
                 szyfr += pom[j][int(d)]
     return szyfr
 
-#ALGORYTM PRZESTAWIENIOWY Z TABLICA O WYMIARACH  NxN, KLUCZEM I USUWANIEM SPACJI
-text = 'KRYPTOANALIZA'
-key = "21403"
+text = input("Enter text: ")
+key = input("Enter key: ")
 
 print(encrytion(space_remove(text), key))
