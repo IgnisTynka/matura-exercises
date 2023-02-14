@@ -15,3 +15,6 @@ def mySqrt(x):
         else:
             end = mid - 1
     return result
+
+x = int(input("Podaj x:"))
+print(mySqrt(x))
