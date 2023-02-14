@@ -9,7 +9,7 @@ def mySqrt(x):
         mid = (start + end) // 2
         if mid * mid == x:
             return mid
-        elif mid * mid <= x:
+        elif mid * mid < x:
             start = mid + 1
             result = mid
         else:
